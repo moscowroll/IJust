@@ -1,0 +1,303 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --color-white: #FFFFFF;
+  --color-grey: #9A9A9A;
+  --color-black: #000000;
+  --color-orange:  #FF9B51;
+
+}
+
+
+
+.container{
+  display:grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 70px 640px 108px 595px 595px 528px 592px 883px 592px 324px 615px 84px;
+  grid-template-areas:
+    "header"
+    "trial"
+    "socialmedia"
+    "tabs"
+    "sublist"
+    "picture"
+    "awesome"
+    "price"
+    "customers"
+    "design"
+    "contacts"
+    "footer";
+
+
+
+}
+
+a{
+
+  text-decoration: none;
+  color: inherit;
+}
+ul{
+  display: flex;
+
+}
+.element2 li{
+  display: block;
+  color: #B0B0B0;
+  list-style: none;
+  padding: 30px 14px;
+  font-family: "Open Sans";
+  font-size: 14px;
+
+}
+
+
+
+.container .Header{
+  display: grid;
+  grid-template-columns: 150px 76px auto 625px;
+  align-content: center;
+  grid-template-areas:
+  ". element1 . element2"
+}
+
+
+
+
+.Header{
+  background-color: var(--color-black);
+  grid-area: header;
+}
+
+.Header .element1{
+  grid-area: element1;
+  display: flex;
+  align-items: center;
+}
+.Header .element1 img{
+  width: 80px;
+  height: 28px;
+}
+.Header .element2{
+  grid-area: element2;
+  display: flex;
+  color: #282828;
+}
+
+.Trial{
+  background-color: var(--color-grey);
+  grid-area: trial;
+  display: grid;
+  grid-template-columns: 150px 530px 215px auto;
+  grid-template-areas:
+    ". leftblock . rightblock";
+
+}
+
+
+
+
+.Trial .leftblock{
+  display: grid;
+  grid-area: leftblock;
+  grid-template-rows: 110px 63px 142px 4px 142px auto;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "."
+    "content1"
+    "content2"
+    "cherk"
+    "content3"
+    "content4"
+
+}
+
+.Trial .leftblock p{
+  font-family: Raleway;
+  font-size: 36px;
+  color: var(--color-white);
+
+
+}
+
+
+.Trial .leftblock h2{
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #C6C6C6;
+  margin-top: 40px;
+}
+
+.leftblock .content1{
+  grid-area: content1
+}
+
+.leftblock .content2{
+  margin-top: 30px;
+  grid-area: content2
+}
+
+.leftblock .content3{
+  grid-area: content3
+}
+
+.leftblock .content4{
+  grid-area: content4
+}
+
+.leftblock .cherk{
+  width: 66px;
+  height: 2px;
+  background-color: var(--color-white);
+  grid-area: cherk;
+}
+.leftblock .content4 button{
+  width: 137px;
+  height: 44px;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-grey);
+  border: 2px solid white;
+}
+
+.Trial .leftblock img{
+  width: 177px;
+  height: 61px;
+  grid-area: img;
+}
+
+.Trial .rightblock{
+  /* border: 1px solid green; */
+  display: grid;
+  grid-area: rightblock;
+  grid-template-columns:100%;
+  grid-template-rows: 140px 365px auto;
+  grid-template-areas:
+  "."
+  "form"
+  ".";
+
+}
+
+
+.Trial .rightblock .form{
+  display: grid;
+  grid-area: form;
+  grid-template-columns: 362px;
+  grid-template-rows: 55px 255px 55px 140px;
+  grid-template-areas:
+  "free"
+  "inputi"
+  "button"
+  ".";
+
+
+}
+
+.Trial .rightblock .free{
+grid-area: free;
+background-color: #F5F5F5;
+text-align: center;
+font-family: "Open Sans";
+font-size: 20px;
+font-weight: bold;
+}
+
+.Trial .rightblock .free p{
+  margin-top: 13px;
+}
+
+.Trial .rightblock .free span{
+  color: var(--color-orange);
+}
+
+.Trial .rightblock .inputi{
+grid-area: inputi;
+background-color: var(--color-white);
+display: grid;
+}
+
+.Trial .rightblock .inputi input{
+  color: var(--color-grey);
+  border: none;
+  padding: 20px 35px;
+  border-bottom: 1px solid var(--color-grey);
+  width: 288px;
+
+}
+
+
+.Trial .rightblock .button{
+grid-area: button;
+background-color: var(--color-orange);
+border: none;
+font-family: "Open Sans";
+font-size: 15px;
+color: var(--color-white);
+}
+.Trial .rightblock .button:hover{
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.SocialMedia{
+  background-color: var(--color-white);
+  grid-area: socialmedia;
+}
+
+.Tabs{
+  background-color: var(--color-grey);
+  grid-area: tabs;
+}
+
+.SubList{
+  background-color: var(--color-white);
+  grid-area: sublist;
+}
+
+.Picture{
+  background-color: var(--color-grey);
+  grid-area: picture;
+}
+
+.Awesome{
+  background-color: var(--color-white);
+  grid-area: awesome;
+}
+
+.Price{
+  background-color: var(--color-grey);
+  grid-auto-columns: price;
+}
+
+.Customers{
+  background-color: var(--color-white);
+  grid-area: customers;
+}
+
+.Design{
+  background-color: var(--color-grey);
+  grid-area: design;
+}
+
+.Contacts{
+  background-color: var(--color-white);
+  grid-area: contacts;
+}
+
+.Footer{
+  background-color: var(--color-black);
+  grid-area: footer;
+}
